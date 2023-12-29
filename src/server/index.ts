@@ -14,7 +14,7 @@ export const appRouter = router({
       })
     )
     .query(async ({ input: { lineId } }) => {
-      return seoulLinesData.find((data) => data.lineId === lineId);
+      return seoulLinesData.find((data) => data.lineId === lineId)!;
     }),
   getStations: procedure
     .input(
@@ -28,11 +28,13 @@ export const appRouter = router({
   getStation: procedure
     .input(
       z.object({
-        stationId: z.number(),
+        stationId: z.string(),
       })
     )
     .query(async ({ input: { stationId } }) => {
-      return seoulSubwayData.find((data) => data.stationId === stationId);
+      return seoulSubwayData.find(
+        (data) => data.stationId === parseInt(stationId)
+      )!;
     }),
 });
 
