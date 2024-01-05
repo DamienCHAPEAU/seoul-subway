@@ -41,7 +41,7 @@ export const ComboboxSubwayLines = ({
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[200px] justify-between mr-4"
+          className="w-[200px] justify-between mr-4 mb-4"
         >
           {lineId
             ? lines.find((line) => line.lineId.toString() === lineId)?.lineName
@@ -108,7 +108,7 @@ export const ComboboxSubwayStations = ({
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[200px] justify-between"
+          className="w-[200px] justify-between mb-4"
         >
           {stationValue
             ? stations.find(
