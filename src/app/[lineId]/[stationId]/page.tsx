@@ -6,6 +6,7 @@ import {
   RealtimeArrivalItem,
   SubwayApiResponse,
 } from '@/types/api-subway-info';
+import { RefreshDataButton } from '@/components/refresh-data-button';
 
 // Define a function to get the station name
 const getStationName = async (statnFid: string) => {
@@ -82,6 +83,7 @@ export default async function LinesPage({
           </div>
         );
       })}
+      <RefreshDataButton />
     </>
   );
 }

@@ -28,12 +28,6 @@ const SubwayCard = ({
           </CardHeader>
         </Card>
       </div>
-      {/* <aside className="fixed bottom-0 right-0 m-6">
-        <Badge className="items-center" variant="outline">
-          <InfoIcon className="h-3.5 w-3.5 -translate-x-1" />
-          Last updated ? sec ago
-        </Badge>
-      </aside> */}
     </>
   );
 };
