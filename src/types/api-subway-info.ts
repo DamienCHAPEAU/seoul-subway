@@ -28,6 +28,7 @@ export type RealtimeArrivalItem = {
   statnFid: string;
   statnTid: string;
   statnId: string;
+  statnFNm: string;
   statnNm: string;
   trainCo: null;
   trnsitCo: string;
