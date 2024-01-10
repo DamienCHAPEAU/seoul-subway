@@ -12,7 +12,7 @@ export const RefreshDataButton = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setLastUpdated((lastUpdated) => lastUpdated + 1);
-    }, 2000);
+    }, 1000);
     if (lastUpdated > 20) {
       router.refresh();
       setLastUpdated(0);
@@ -25,7 +25,10 @@ export const RefreshDataButton = () => {
       <Button
         className="flex items-center justify-center gap-3 rounded-full"
         variant="outline"
-        onClick={() => router.refresh()}
+        onClick={() => {
+          router.refresh();
+          setLastUpdated(0);
+        }}
       >
         <RotateCw className="h-4 w-4" />
         Last updated {lastUpdated} sec ago
