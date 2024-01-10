@@ -6,6 +6,7 @@ import { ComboboxSubwayLines } from '@/components/select-subway';
 import { fontSans } from '@/lib/font';
 import { serverClient } from './_trpc/serverClient';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   title: 'Seoul Subway',
@@ -32,6 +33,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         <ComboboxSubwayLines lines={lines} />
         <Provider>{children}</Provider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
